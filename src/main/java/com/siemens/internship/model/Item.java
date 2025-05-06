@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
+@Data
 @Entity
 @Getter
 @Setter
@@ -24,8 +25,6 @@ public class Item {
     private String description;
     @Column
     private String status;
-
-    // Add email regex validation
     @Column
     @NotBlank(message = "Email is required")
     @Email(message = "invalid email format")
